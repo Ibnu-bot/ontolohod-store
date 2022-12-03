@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Roboto+Mono&family=Roboto+Slab:wght@500&display=swap"
+        rel="stylesheet">
+    <title>My Store</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h4>Ontolohod Store</h4>
+        </div>
+
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="product.html" class="active">Product</a></li>
+            <li><a href="category.html" class="active">Category</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+        </ul>
+
+        <div class="menu-toogle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </nav>
+    <main>
+        <div class="info">
+            <div class="kontak animate__animated animate__fadeIn animate__delay-1s">
+                <div class="waa" onclick="chat()">
+                    <h1><i class="fa-brands fa-whatsapp"></i></h1>
+                    <h1>Whatsapp</h1>
+                </div>
+                <div class="igg" onclick="redirinstagram()">
+                    <h1><i class="fa-brands fa-instagram"></i></h1>
+                    <h1>Instagram</h1>
+                </div>
+                <div class="email" onclick="redirmailto()">
+                    <h1><i class="fa-regular fa-envelope"></i></h1>
+                    <h1>Gmail</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main>
+        <div class="bestseller">
+            <h2 class="title1">Expedition Services</h2>
+            <div class="row">
+                <div class="col">
+                    <img src="/img/jne.png" />
+                </div>
+                <div class="col">
+                    <img src="/img/pos.png" />
+                </div>
+                <div class="col">
+                    <img src="/img/jnt.png" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright <span id="year"></span> Ontolohod Store</p>
+        <h5>Coded By Ibnu Hasan</h5>
+    </footer>
+
+    <script src="/source.js"></script>
+
+</body>
+
+</html>

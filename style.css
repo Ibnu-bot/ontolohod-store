@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+/*navbar */
+nav {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(147, 78, 211);
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  color: white;
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+}
+
+nav .logo {
+  letter-spacing: 3px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.active {
+   background-color: whitesmoke;
+   color: black;
+   padding: 6px;
+   border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color: tomato;
+  transition: all .3s ease-in-out;
+}
+
+.menu-toogle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toogle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toogle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toogle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toogle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toogle input:checked ~span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toogle input:checked ~span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toogle input:checked ~span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: beige;
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  }
+
+.promotion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+  border-radius: 1rem;
+  }
+
+.promotion .gambar{
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  }
+
+.promotion .gambar img{
+  width: 320px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  transition: 0.35s;
+  cursor: pointer;
+  }
+
+.promotion .gambar img:hover{
+  transform: scale(1.1);
+  transition: .35s;
+  }
+
+.promotion .desk{
+  transition: 0.35s;
+  margin-left: 5rem;
+  }
+
+.promotion .desk h4{
+  color: black;
+  transition: 0.35s;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Secular One', sans-serif;
+  }
+
+.promotion .desk h1{
+    color: black;
+    transition: 0.35s;
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+.promotion .desk p{
+    color: black;
+    transition: 0.35s;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+.promotion .desk h5{
+    color: tomato;
+    transition: 0.35s;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: 'Roboto Slab', serif;
+  }
+
+.bestseller {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}  
+
+.title {
+  font-size: 2rem;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.title::after {
+  content: '';
+  width: 80px;
+  height: 5px;
+  background-color: rgb(147, 78, 211);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+  margin-bottom: 25px;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.col img {
+  width: 100%;
+  border-radius: 8px;
+  
+}
+
+.col img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+
+}
+
+.info{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: beige;
+  display: flex;
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  }
+
+  .kontak{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  .kontak waa{
+    text-decoration: none;
+  }
+  .waa{
+    background-color: white;
+    border: 3px solid rgb(147, 78, 211);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    transition: .35s;
+  }
+  .waa h1{
+    color: rgb(17, 224, 48);
+    text-align: center;
+  }
+  .waa:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .35s;
+  }
+  .igg{
+    background-color: white;
+    border: 3px solid rgb(147, 78, 211);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    transition: .35s;
+  }
+  .igg h1{
+    text-align: center;
+    color: rgb(214, 35, 44);
+  }
+  .igg:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .35s;
+  }
+
+  .email{
+    background-color: white;
+    border: 3px solid rgb(147, 78, 211);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    transition: .35s;
+  }
+
+  .email h1{
+    text-align: center;
+    color: rgb(38, 32, 202);
+  }
+  .email:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .35s;
+  }
+
+  .title1 {
+    font-size: 2rem;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .title1::after {
+    content: '';
+    width: 300px;
+    height: 5px;
+    background-color: rgb(147, 78, 211);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+footer {
+  height: 80px;
+  background-color: rgb(147, 78, 211);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  position: inherit;
+}
+
+footer p {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+footer h5 {
+  color: aliceblue;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+
+
+/*responsive breakpoint */
+
+/*responsive tablet */
+@media screen and (max-width: 768px){
+  nav ul {
+    width: 50%;
+  }
+}
+
+/*responsive mobile */
+@media screen and (max-width: 576px){
+
+  .menu-toogle {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 50px;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(147, 78, 211);
+    opacity: 0.5;
+    z-index: 1;
+    transform: translateX(100);
+    transition: all 1s;
+  }
+
+  nav ul.slide {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .promotion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    background-color: var(--card);
+    border-radius: 1rem;
+  }
+  .promotion .gambar img{
+    width: 200px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transition: 0.35s;
+  }
+  .promotion .gambar img:hover{
+    transform: scale(103%);
+    transition: .35s;
+  }
+  .promotion .desk{
+    color: black;
+    transition: 0.35s;
+    margin-top: 1rem;
+  }
+  .promotion .desk h4{
+    color: black;
+    transition: 0.35s;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .promotion .desk h1{
+    color: black;
+    transition: 0.35s;
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+  }
+  .promotion .desk h5{
+    color: tomato;
+    transition: 0.35s;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+}

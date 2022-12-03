@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    color: #C1AAC6;
+    background: whitesmoke;
+    font-family: 'Montserrat', monospace;
+}
+
+*,
+ :after,
+ :before {
+    box-sizing: border-box
+}
+
+nav {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: rgb(147, 78, 211);
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    color: white;
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+  }
+  
+  nav .logo {
+    letter-spacing: 3px;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .active {
+     background-color: whitesmoke;
+     color: black;
+     padding: 6px;
+     border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    color: tomato;
+    transition: all .3s ease-in-out;
+  }
+  
+  
+  .menu-toogle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .menu-toogle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .menu-toogle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+  }
+  
+  /* Hamburger Menu Animation */
+  .menu-toogle span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+  
+  .menu-toogle span:nth-child(4) {
+    transform-origin: 0 100%;
+  }
+  
+  .menu-toogle input:checked ~span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+  }
+  
+  .menu-toogle input:checked ~span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+  }
+  
+  .menu-toogle input:checked ~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+.clearfix:after,
+.clearfix:before {
+    content: '';
+}
+
+.clearfix:after {
+    clear: both;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.container {
+    background-color: beige;
+    border-radius: 2rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 5%;
+    max-width: 525px;
+    min-height: 550px;
+    position: relative;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+.login-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+}
+
+.login-container .sign-in-htm,
+.login-container .sign-up-htm {
+    top: 30%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+}
+
+.login-container .sign-up-htm {
+    top: 20%;
+}
+
+.login-container .sign-in,
+.login-container .sign-up,
+.login-form .group .check {
+    display: none;
+}
+
+.login-container .item,
+.login-form .group .label,
+.login-form .group .button {
+    text-transform: uppercase;
+}
+
+.login-container .item {
+    font-size: 22px;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+.login-container .sign-in:checked+.item,
+.login-container .sign-up:checked+.item {
+    color: black;
+    border-color: rgb(61, 15, 104);
+}
+
+.login-form {
+    min-height: 345px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.login-form .group {
+    margin-bottom: 15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+    width: 100%;
+    color: black;
+    display: block;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.login-form .group .input,
+.login-form .group .button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+}
+
+.login-form .group input[data-type="password"] {
+    -webkit-text-security: circle;
+}
+
+.login-form .group .label {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.login-form .group .button {
+    background: rgb(147, 78, 211);
+    color: white;
+}
+
+.login-form .group .check:checked+label {
+    color: #fff;
+}
+
+.login-container .sign-in:checked+.item+.sign-up+.item+.login-form .sign-in-htm {
+    transform: rotate(0);
+}
+
+.login-container .sign-up:checked+.item+.login-form .sign-up-htm {
+    transform: rotate(0);
+}
+
+.foot {
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+}
+
+/*responsive breakpoint */
+
+/*responsive tablet */
+@media screen and (max-width: 768px){
+    nav ul {
+      width: 50%;
+    }
+  }
+  
+  /*responsive mobile */
+  @media screen and (max-width: 576px){
+
+    .menu-toogle {
+      display: flex;
+    }
+    nav ul {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-top: 50px;
+      width: 35%;
+      height: 100vh;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(147, 78, 211);
+      opacity: 0.5;
+      z-index: 1;
+      transform: translateX(100);
+      transition: all 1s;
+    }
+  
+    nav ul.slide {
+      display: flex;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  
+    .promotion{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 90%;
+      background-color: var(--card);
+      border-radius: 1rem;
+    }
+    .promotion .gambar img{
+      width: 200px;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      transition: 0.35s;
+    }
+    .promotion .gambar img:hover{
+      transform: scale(103%);
+      transition: .35s;
+    }
+    .promotion .desk{
+      color: black;
+      transition: 0.35s;
+      margin-top: 1rem;
+    }
+    .promotion .desk h4{
+      color: black;
+      transition: 0.35s;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .promotion .desk h1{
+      color: black;
+      transition: 0.35s;
+      margin-bottom: 0.5rem;
+      font-size: 3rem;
+    }
+    .promotion .desk h5{
+      color: tomato;
+      transition: 0.35s;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+  }
